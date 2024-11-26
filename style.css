@@ -1,0 +1,219 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Source Code Pro", monospace; */
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --b_g: rgb(0, 212, 255);
+  --bg: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 17%,
+    rgba(11, 9, 121, 1) 37%,
+    rgba(2, 0, 36, 1) 63%
+  );
+  --clr: white;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background: var(--b_g);
+  background: var(--bg);
+  color: var(--clr);
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+blockquote {
+  font-family: "Playfair Display", serif;
+}
+
+sidebar {
+  position: relative;
+  background-color: #1be4fd36;
+  /* width: 440px; */
+  height: 100vh;
+}
+sidebar nav {
+  padding: 20px 55px 20px 25px;
+}
+sidebar nav li {
+  list-style: none;
+  margin: 50px 0;
+  text-align: center;
+  position: relative;
+}
+
+sidebar nav li a {
+  font-weight: bolder;
+  font-size: 20px;
+  color: var(--clr);
+  text-decoration: none;
+  border: 3px solid white;
+  border-radius: 10px;
+  width: 7em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -1px 1px 19px 8px white;
+  filter: drop-shadow(4px 21px 1px blue);
+  position: relative;
+  overflow: hidden; /* Prevents pseudo-element overflow */
+  z-index: 2; /* Ensures the text remains on top */
+  color: white; /* Makes text color stand out */
+}
+
+sidebar nav li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Starts hidden */
+  height: 100%;
+  background: linear-gradient(to left, rgb(8, 206, 255), rgb(42, 4, 255));
+  transition: width 0.4s ease; /* Smooth left-to-right transition */
+  z-index: -1; /* Places the pseudo-element behind the text */
+}
+
+sidebar nav li a:hover::before {
+  width: 0%; /* Expands fully on hover */
+}
+
+.logo img {
+  width: 140px;
+  /* text-align: center; */
+}
+main {
+  /* background: yellow; */
+  width: 85vw;
+}
+
+section .container {
+  display: flex;
+}
+.devContainer {
+  /* background-color: aqua; */
+  height: 60vh;
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 80px 15px;
+  align-items: center;
+}
+
+.devPic img {
+  position: absolute;
+  top: 70px;
+  right: 0px;
+  height: 55vh;
+  filter: drop-shadow(5px 13px 17px black);
+}
+.devInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 36vw;
+}
+.devInfo > * {
+  margin: 4px 0px;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  padding: 18px 0px 5px;
+  position: relative;
+}
+
+.buttons .btn {
+  border: 3px solid white;
+  width: 8em;
+  height: 3.5em;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to left, rgb(0, 204, 255), rgb(48, 1, 255));
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.buttons .btn:hover::before {
+  width: 100%;
+}
+
+.btn a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.devInfo .greet {
+  font-size: 3.5rem;
+  /* font-family: "Source Code Pro", monospace; */
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+}
+.devInfo .name {
+  font-size: 2.5rem;
+  font-family: "Source Code Pro", monospace;
+  /* font-family: "Open Sans", sans-serif; */
+  font-weight: bold;
+}
+.devInfo .about {
+  font-size: 1.5rem;
+  /* font-family: "Source Code Pro", monospace; */
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+}
+.devInfo .aboutMore {
+  font-size: 1rem;
+  font-family: "Source Code Pro", monospace;
+  /* font-family: "Open Sans", sans-serif; */
+  font-weight: 500;
+  /* width: 59vw; */
+  margin: 6px 0;
+  letter-spacing: 1px;
+}
+
+.footer {
+  position: relative;
+  height: 35px;
+  width: 100vw;
+  bottom: 35px;
+  right: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: "Source Code Pro", monospace;
+  background-color: #3521ed54;
+}
