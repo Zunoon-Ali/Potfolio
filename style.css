@@ -78,11 +78,11 @@ sidebar nav li a::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Starts hidden */
+  width: 100%;
   height: 100%;
-  background: linear-gradient(to left, rgb(8, 206, 255), rgb(42, 4, 255));
-  transition: width 0.4s ease; /* Smooth left-to-right transition */
-  z-index: -1; /* Places the pseudo-element behind the text */
+  background: linear-gradient(rgb(8, 206, 255), rgb(42, 4, 255));
+  transition: width 0.4s cubic-bezier(0.32, 0.68, 0.86, 1.15);
+  z-index: -1;
 }
 
 sidebar nav li a:hover::before {
@@ -103,20 +103,34 @@ section .container {
 }
 .devContainer {
   /* background-color: aqua; */
-  height: 60vh;
-  width: 80vw;
+  /* height: 60vh; */
+  width: 75vw;
   display: flex;
-  justify-content: space-evenly;
-  margin: 80px 15px;
+  justify-content: space-between;
+  margin: 87px 10px 10px 77px;
   align-items: center;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 8px 11px 16px 1px blue;
 }
 
 .devPic img {
   position: absolute;
-  top: 70px;
-  right: 0px;
-  height: 55vh;
+  top: 110px;
+  right: 116px;
+  /* height: 55vh; */
   filter: drop-shadow(5px 13px 17px black);
+  /* padding: 20px; */
+  width: 22vw;
+  border: 3px solid white;
+  border-radius: 162px;
+  overflow: hidden;
+  box-shadow: inset 4px 3px 67px 20px #2196f3;
+  filter: drop-shadow(20px 11px 1px #120b66);
+  animation: slideInRight 1.2s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 1s;
 }
 .devInfo {
   display: flex;
@@ -124,6 +138,7 @@ section .container {
   justify-content: center;
   flex-direction: column;
   width: 36vw;
+  /* opacity: 0.7; */
 }
 .devInfo > * {
   margin: 4px 0px;
@@ -146,6 +161,9 @@ section .container {
   align-items: center;
   position: relative;
   overflow: hidden;
+  opacity: 0; /* Hidden initially */
+  animation: slideInDown 1s ease-out forwards; /* Trigger the animation */
+  animation-delay: 0.3s; /* Staggered animation */
 }
 
 .btn::before {
@@ -178,29 +196,55 @@ section .container {
 .devInfo .greet {
   font-size: 3.5rem;
   /* font-family: "Source Code Pro", monospace; */
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: cursive, sans-serif;
   font-weight: lighter;
 }
 .devInfo .name {
   font-size: 2.5rem;
-  font-family: "Source Code Pro", monospace;
-  /* font-family: "Open Sans", sans-serif; */
+  /* font-family: "Source Code Pro", monospace; */
+  font-family: cursive, sans-serif;
+  white-space: nowrap;
   font-weight: bold;
+  overflow: hidden;
+  border-right: 4px solid rgb(255, 255, 255); /* Mimics a typing cursor */
+  width: fit-content;
 }
 .devInfo .about {
+  font-family: cursive, sans-serif;
   font-size: 1.5rem;
   /* font-family: "Source Code Pro", monospace; */
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
   font-weight: lighter;
 }
 .devInfo .aboutMore {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: "Source Code Pro", monospace;
   /* font-family: "Open Sans", sans-serif; */
-  font-weight: 500;
+  font-weight: bold;
   /* width: 59vw; */
   margin: 6px 0;
   letter-spacing: 1px;
+}
+.greet,
+.name,
+.about,
+.aboutMore {
+  opacity: 0;
+  animation: slideInLeft 1s ease-in-out forwards;
+}
+
+.greet {
+  animation-delay: 0.5s;
+}
+.name {
+  animation-delay: 1s;
+}
+.about {
+  animation-delay: 1s;
+}
+.aboutMore {
+  animation-delay: 1.5s;
 }
 
 .footer {
@@ -216,4 +260,93 @@ section .container {
   font-weight: bold;
   font-family: "Source Code Pro", monospace;
   background-color: #3521ed54;
+}
+
+.formContainer {
+  width: 50vw;
+  margin: auto;
+  padding: 20px 0px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+.formContainer form {
+  padding: 50px 10px 0px 10px;
+  /* border: 2px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  /* padding-top: 30px; */
+  box-shadow: -9px 5px 11px 2px #03a9f4;
+  width: 44vw;
+  height: 85vh;
+  filter: drop-shadow(14px 27px 3px black);
+}
+
+.form-group {
+  margin: 7px 0;
+}
+.form-group input {
+  margin: 5px 0;
+  width: 25vw;
+  height: 6vh;
+  border-radius: 7px;
+  padding: 0 0 0 15px;
+}
+.form-group textarea {
+  width: 25vw;
+  height: 10vh;
+  border-radius: 7px;
+  margin: 5px 0;
+  /* padding: 2px 0 0 0px; */
+}
+
+.form-group label {
+  display: block;
+  color: white;
+  margin: 5px 0;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate(-100%, -100%);
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes slideInDown {
+  0% {
+    transform: translate(-100%, 70%) scale(0.5) rotate(0deg); /* Start off-screen with no rotation */
+    opacity: 0; /* Fully transparent */
+  }
+  25% {
+    transform: translate(-50%, 30%) scale(0.8) rotate(90deg); /* Rotate 90 degrees */
+    opacity: 0.3; /* Partially visible */
+  }
+  50% {
+    transform: translate(-20%, 20%) scale(1.2) rotate(180deg); /* Rotate 180 degrees */
+    opacity: 0.5; /* Partially visible */
+  }
+  75% {
+    transform: translate(10%, 10%) scale(1.1) rotate(270deg); /* Rotate 270 degrees */
+    opacity: 0.7; /* More visible */
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(360deg); /* Full rotation */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate(100%, 50%) scale(1.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
 }

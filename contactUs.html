@@ -17,13 +17,15 @@
       </div>
       <div class="container">
         <sidebar>
-          <div class="hamburger"></div>
+          <div class="hamburger">
+            <!-- <img src="assets/hamburger.svg" alt=""> -->
+          </div>
           <nav>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="About.html"> About</a></li>
+              <li><a href="index.html">Intro</a></li>
+              <li><a href="About.html"> About Me</a></li>
               <!-- <li><a href="">My Intro</a></li> -->
-              <li><a href="Services.html"> Services</a></li>
+              <li><a href="Services.html">Skills & Services</a></li>
               <!-- <li><a href="CV.html"> Resume</a></li> -->
               <li><a href="blog.html">Blog</a></li>
               <li><a href="contactUs.html">Contact US</a></li>
@@ -31,27 +33,60 @@
           </nav>
         </sidebar>
         <main>
-          <div class="devContainer">
-            <div class="devInfo">
-              <div class="greet">Hi I am</div>
-              <div class="name">Muhammad Zunoon Ali</div>
-              <div class="about">I am Web Developer</div>
-              <div class="aboutMore">
-                Lorem ipsum, dolor sit amet quibusdam. Eveniet minima esse nihil
-                natus quod cum possimus iure perferendis expedita minus modi,
-                vero tenetur repellendus, fugit enim. Saepe eos nobis accusamus.
+          <div class="formContainer">
+            <form action="">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name:</label>
+                <input
+                  type="name"
+                  class="form-control simpleInput"
+                  id="name"
+                  placeholder="Enter Your Full Name"
+                />
               </div>
-              <div class="buttons">
-                <button>Download CV</button>
-                <button>Contact me</button>
+              <div class="form-group">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control simpleInput"
+                  id="email"
+                  placeholder="Enter Your Email"
+                />
               </div>
-            </div>
-            <div class="devPic"><img src="assets/h.png" alt="handsome" /></div>
+              <div class="form-group">
+                <label for="address" class="form-label">Address</label>
+                <textarea
+                  class="form-control textInput"
+                  id="address"
+                  rows="3"
+                >
+                </textarea>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control textInput"
+                  id="message"
+                  rows="3"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <div class="buttons">
+                  <div class="btn">
+                    <a href="#">Submit</a>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </main>
       </div>
+      <div class="footer">
+        <p>
+          &copy; <span id="year"></span> Your Website Name. All rights reserved.
+        </p>
+      </div>
     </section>
-    <section></section>
 
     <script src="main.js"></script>
   </body>
