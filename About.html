@@ -1,48 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Lato&family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <section>
-      <div class="logo">
-        <!-- <img src="assets/zAlg.png" alt="Zunoon"> -->
-      </div>
-      <div class="container">
-        <sidebar>
-          <div class="hamburger">
-            <!-- <img src="assets/hamburger.svg" alt=""> -->
-          </div>
-          <nav>
-            <ul>
-              <li><a href="index.html">Intro</a></li>
-              <li><a href="About.html">About Me</a></li>
-              <!-- <li><a href="">My Intro</a></li> -->
-              <li><a href="Services.html">Skills & Services</a></li>
-              <!-- <li><a href="CV.html"> Resume</a></li> -->
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="contactUs.html">Contact US</a></li>
-            </ul>
-          </nav>
-        </sidebar>
-        <main>
-         
-        </main>
-      </div>
-      <div class="footer">
-      <p>&copy; <span id="year"></span> Your Website Name. All rights reserved.</p>
-
-      </div>
-    </section>
-    
-
-    <script src="main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <section>
+    <div class="logo"></div>
+    <div class="container">
+      <sidebar>
+        <div class="hamburger"></div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Intro</a></li>
+            <li><a href="About.html">About Me</a></li>
+            <li><a href="Skill.html">Skills </a></li>
+            <li><a href="Services.html"> Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contactUs.html">Contact US</a></li>
+          </ul>
+        </nav>
+      </sidebar>
+      <main>
+        <section class="about-me">
+          <h1>About Me</h1>
+          <p class="intro">
+            Hi, I'm <strong> Muhammad Zunoon Ali</strong>, a front-end developer
+            based in Karachi with a strong foundation in web development and design. 
+            <br />I specialize in crafting responsive, user-centric websites using 
+            <strong>HTML, CSS, JavaScript, and Bootstrap</strong>, with a keen eye for detail and aesthetics.
+          </p>
+          <p class="edu">
+            My academic journey began at <strong>The Citizen Foundation (TCF)</strong>, 
+            where I completed my matriculation with an A grade (77%), focusing on Computer Science. 
+            I then pursued my intermediate education at <strong>TCF College Qayyumabad</strong>, earning a 
+            <strong>B grade (69%)</strong>, with a specialization in <strong>Pre-Engineering</strong>. 
+            Currently, I am enrolled in the <strong>BSCS</strong> program at 
+            <strong>SZABIST University</strong>, where I continue to develop my skills in 
+            <strong>software development and web technologies</strong>.
+          </p>
+          <p class="prevExp">
+            Professionally, I completed a one-month internship as a 
+            <strong>Laravel developer</strong> at <strong>Fossphorus Software House</strong>, 
+            gaining hands-on experience in backend development and learning to collaborate effectively in a team environment.
+          </p>
+          <p class="pracEx">
+            Outside of academics and work, I am passionate about building innovative web solutions, 
+            experimenting with new design trends, and enhancing user experiences. My habits include 
+            continuous learning through tutorials and blogs, staying updated with the latest web technologies, 
+            and refining my coding and design skills.
+          </p>
+          <p class="prob">
+            I take pride in my attention to detail, problem-solving skills, and ability to balance 
+            functionality with visual appeal. My goal is to create impactful digital experiences 
+            that not only meet client expectations but also stand out in today’s competitive online landscape.
+          </p>
+          <p class="prt">
+            Feel free to explore my portfolio and connect with me if you'd like to discuss a project 
+            or collaborate on something exciting!
+          </p>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <p>&copy; <strong id="year">2024</strong> Muhammad Zunoon Ali. All rights reserved.</p>
+    </footer>
+  </section>
+  <script src="main.js"></script>
+</body>
 </html>

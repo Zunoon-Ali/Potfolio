@@ -20,9 +20,9 @@ function typeEffect() {
         nameElement.textContent = nameText.slice(0, index--);
     }
 
-    if (index === nameText.length+1) {
-        isDeleting = true;  
-        setTimeout(typeEffect, 2000); 
+    if (index === nameText.length + 1) {
+        isDeleting = true;
+        setTimeout(typeEffect, 2000);
         return;
     }
 
@@ -36,3 +36,23 @@ function typeEffect() {
 }
 
 typeEffect();
+
+document.addEventListener("DOMContentLoaded", () => {
+    const progressBars = document.querySelectorAll(".progress-bar");
+
+    progressBars.forEach((bar) => {
+        const targetWidth = bar.getAttribute("data-percent");
+        bar.style.width = targetWidth + "%";
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const circles = document.querySelectorAll(".skill-circle");
+    circles.forEach((circle) => {
+        const finalPercent = circle.style.getPropertyValue("--percent");
+        circle.style.setProperty("--final-percent", finalPercent);
+        circle.style.setProperty("--percent", 0);
+        setTimeout(() => {
+            circle.style.setProperty("--percent", finalPercent);
+        }, 100);
+    });
+});

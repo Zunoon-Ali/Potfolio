@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
+    <title>Skills & Services</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Lato&family=Playfair+Display&display=swap"
@@ -13,36 +13,111 @@
   <body>
     <section>
       <div class="logo">
-        <!-- <img src="assets/zAlg.png" alt="Zunoon"> -->
+        <!-- Logo can be added here -->
       </div>
       <div class="container">
         <sidebar>
           <div class="hamburger">
-            <!-- <img src="assets/hamburger.svg" alt=""> -->
+            <!-- Hamburger Menu -->
           </div>
           <nav>
             <ul>
               <li><a href="index.html">Intro</a></li>
-              <li><a href="About.html"> About Me</a></li>
-              <!-- <li><a href="">My Intro</a></li> -->
-              <li><a href="Services.html"> Skills & Services</a></li>
-              <!-- <li><a href="CV.html"> Resume</a></li> -->
+              <li><a href="About.html">About Me</a></li>
+              <li><a href="Skill.html">Skills </a></li>
+              <li><a href="Services.html"> Services</a></li>
               <li><a href="blog.html">Blog</a></li>
-              <li><a href="contactUs.html">Contact US</a></li>
+              <li><a href="contactUs.html">Contact Us</a></li>
             </ul>
           </nav>
         </sidebar>
         <main>
-          
+          <div class="skillAndServices">
+            <section id="services">
+              <h2>My Services</h2>
+              <div class="quote">
+                <p>
+                  "Turning ideas into reality with seamless web development and
+                  design."
+                </p>
+              </div>
+              <div class="service-container">
+                <div class="service">
+                  <h3>Single Page Websites</h3>
+                  <p>
+                    I create single-page websites that are clean, fast, and
+                    visually appealing, ideal for businesses or portfolios.
+                  </p>
+                </div>
+                <div class="service">
+                  <h3>Multiple Page Websites</h3>
+                  <p>
+                    Whether it's a blog, business website, or an e-commerce
+                    platform, I can help you build a multi-page website that
+                    suits your needs.
+                  </p>
+                </div>
+                <div class="service">
+                  <h3>PSD to Website</h3>
+                  <p>
+                    Transform your PSD files into fully responsive websites.
+                    I'll make sure the design stays intact while ensuring
+                    optimal functionality.
+                  </p>
+                </div>
+                <div class="service">
+                  <h3>Image to Website</h3>
+                  <p>
+                    Have a design in an image format? I can convert your image
+                    mockups into functional web pages with smooth transitions
+                    and user-friendly design.
+                  </p>
+                </div>
+                <div class="service">
+                  <h3>Custom Web Solutions</h3>
+                  <p>
+                    If you need something unique, I offer custom web solutions
+                    tailored to your needs. Whether it's a special feature or
+                    animation, I've got you covered.
+                  </p>
+                </div>
+                <div class="service">
+                  <h3>Responsive Design</h3>
+                  <p>
+                    All the websites I build are responsive and optimized for
+                    mobile, tablet, and desktop viewing, ensuring a seamless
+                    experience on any device.
+                  </p>
+                </div>
+                <div class="service">
+                  <h3>SEO Optimization</h3>
+                  <p>
+                    Ensure your website gets noticed with SEO services. I help
+                    optimize websites for search engines to improve visibility
+                    and ranking.
+                  </p>
+                </div>
+                <div class="service">
+                  <h3>Website Maintenance</h3>
+                  <p>
+                    After your site is live, I offer ongoing maintenance
+                    services to keep it updated and running smoothly.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
         </main>
       </div>
       <div class="footer">
-      <p>&copy; <span id="year"></span> Your Website Name. All rights reserved.</p>
-
+        <p>
+          &copy; <span id="year"></span> Your Website Name. All rights reserved.
+        </p>
       </div>
     </section>
-    
 
-    <script src="main.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
