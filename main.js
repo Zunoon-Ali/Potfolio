@@ -45,14 +45,24 @@ document.addEventListener("DOMContentLoaded", () => {
         bar.style.width = targetWidth + "%";
     });
 });
-document.addEventListener("DOMContentLoaded", () => {
-    const circles = document.querySelectorAll(".skill-circle");
-    circles.forEach((circle) => {
-        const finalPercent = circle.style.getPropertyValue("--percent");
-        circle.style.setProperty("--final-percent", finalPercent);
-        circle.style.setProperty("--percent", 0);
-        setTimeout(() => {
-            circle.style.setProperty("--percent", finalPercent);
-        }, 100);
-    });
+// document.addEventListener("DOMContentLoaded", () => {
+//     const circles = document.querySelectorAll(".skill-circle");
+//     circles.forEach((circle) => {
+//         const finalPercent = circle.style.getPropertyValue("--percent");
+//         circle.style.setProperty("--final-percent", finalPercent);
+//         circle.style.setProperty("--percent", 0);
+//         setTimeout(() => {
+//             circle.style.setProperty("--percent", finalPercent);
+//         }, 100);
+//     });
+// });
+// Toggle Sidebar Menu
+const hamburger = document.getElementById("hamburger");
+const sidebar = document.getElementById("sidebar");
+
+hamburger.addEventListener("click", () => {
+    sidebar.style.display = sidebar.style.display === "flex" ? "none" : "flex";
 });
+
+// Update Year in Footer
+document.getElementById("year").textContent = new Date().getFullYear();
