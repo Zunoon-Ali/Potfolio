@@ -57,12 +57,41 @@ document.addEventListener("DOMContentLoaded", () => {
 //     });
 // });
 // Toggle Sidebar Menu
-const hamburger = document.getElementById("hamburger");
-const sidebar = document.getElementById("sidebar");
 
-hamburger.addEventListener("click", () => {
-    sidebar.style.display = sidebar.style.display === "flex" ? "none" : "flex";
+
+// const ham = document.getElementById("hamburger")
+// const Sidebar = document.getElementsByTagName("sidebar")
+// const closeBtn = document.getElementById("close")
+
+// ham.addEventListener("click", () => {
+// })
+// closeBtn.addEventListener("click", () => {
+
+// })
+
+// Select elements
+const ham = document.getElementById("hamburger");
+const sidebar = document.getElementsByTagName("sidebar")[0];
+const closeBtn = document.getElementById("close");
+
+// Initial styles for sidebar
+sidebar.style.left = "-300px"; // Initially hidden
+sidebar.style.width = "300px";
+sidebar.style.height = "100%";
+sidebar.style.transition = "left 0.3s ease";
+ham.style.display = "block"; // Show hamburger by default
+closeBtn.style.display = "none"; // Hide close button by default
+
+// Show Sidebar (Hamburger click)
+ham.addEventListener("click", () => {
+    sidebar.style.left = "0"; // Slide sidebar into view
+    ham.style.display = "none"; // Hide hamburger
+    closeBtn.style.display = "block"; // Show close button
 });
 
-// Update Year in Footer
-document.getElementById("year").textContent = new Date().getFullYear();
+// Hide Sidebar (Close button click)
+closeBtn.addEventListener("click", () => {
+    sidebar.style.left = "-300px"; // Slide sidebar out of view
+    ham.style.display = "block"; // Show hamburger
+    closeBtn.style.display = "none"; // Hide close button
+});
